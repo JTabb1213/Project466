@@ -2,7 +2,7 @@
     <style>
         .top{
             color: green;
-        text-align: center;
+	    text-align: center;
 	    }
 	.button1{
         align-items: center;

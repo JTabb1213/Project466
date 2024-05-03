@@ -24,13 +24,15 @@
     <head>
         <title>Queue</title>
         <link rel="stylesheet" href="queues.css">
+        <link rel="stylesheet" href="buttons.css">
+        <link rel="stylesheet" href="inputTextbox.css">
     </head>
     <body>
         <h1 class='top'>Queue</h1>
         <button class="button2" onclick="window.location.href = 'index.php';">Go back</button>
         <form method="post">
             <label for="signUpForQueue">To enter priority queue, you can pay (dollar amount only, no cents). Would you like to pay? Leave empty of type 0 if not</label>
-                <input type="number" name="signUpForQueue" id="signUpForQueue">
+            <input type="number" name="signUpForQueue" id="signUpForQueue">
             <br>
 
             <label for="enterFirstName">Enter first name:</label>
@@ -48,18 +50,21 @@
                     }
                 ?>
             </select>
-
-            <button type="submit" name="signUp">Sign up for queue</button>
+            <br>
+            <div class="bottomButtonContainer">
+                <button class="btn btn-rect-to-round btn-rect-to-round--blue" type="submit" name="signUp">Sign up for queue</button>
+            </div>
         </form>
 
-        <form method="post">
-            <button type="submit" name="viewQueueFree">View free queue</button>
-        </form>
+        <div class="bottomButtonContainer">
+            <form method="post">
+                <button class="btn btn-rect-to-round btn-rect-to-round--blue" type="submit" name="viewQueueFree">View free queue</button>
+            </form>
 
-        <form method="post">
-            <button type="submit" name="viewQueuePaid">View paid queue</button>
-        </form>
-        
+            <form method="post">
+                <button class="btn btn-rect-to-round btn-rect-to-round--blue" type="submit" name="viewQueuePaid">View paid queue</button>
+            </form>
+        </div>
         <?php
             if(isset($_POST['viewQueueFree'])){
                 $username = 'z2003886';
